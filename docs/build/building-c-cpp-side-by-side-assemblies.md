@@ -22,7 +22,7 @@ ms.contentlocale: zh-CN
 ms.lasthandoff: 12/21/2017
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>生成 C/C++ 并行程序集
-A[通过并行程序集](http://msdn.microsoft.com/library/windows/desktop/ff951640)是资源的集合-一组 Dll、 windows 类、 COM 服务器、 类型库或接口 — 可用于应用程序在运行时使用。 将 Dll 重新打包程序集的主要优点是，在同一时间应用程序可以使用多个版本的程序集，并且可能对发布更新的当前安装的服务程序集。  
+[并行程序集](http://msdn.microsoft.com/library/windows/desktop/ff951640)是资源的集合-一组 Dll、 windows 类、 COM 服务器、 类型库或接口 — 可用于应用程序在运行时使用。 将 Dll 重新打包程序集的主要优点是，在同一时间应用程序可以使用多个版本的程序集，并且可能对发布更新的当前安装的服务程序集。  
   
  Visual c + + 应用程序可以使用应用程序的不同部分中的一个或多个 Dll。 在运行时，Dll 加载到主进程并执行所需的代码。 应用程序依赖于操作系统以找到所需的 Dll、 了解其他依赖 Dll 已加载，然后与请求的 DLL 中加载它们。 在 Windows 操作系统版本早于 Windows XP、 Windows Server 2003 和 Windows Vista 中，操作系统加载程序搜索的应用程序的本地文件夹或指定的系统路径上的另一个文件夹中的依赖 Dll。 在 Windows XP、 Windows Server 2003 和 Windows Vista 上，操作系统加载程序还可以搜索使用的依赖 Dll[清单](http://msdn.microsoft.com/library/windows/desktop/aa375365)文件然后搜索包含这些 Dll 的并行程序集。  
   
